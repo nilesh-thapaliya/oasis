@@ -1,0 +1,129 @@
+@import '../../Common/Styles/Mixin.scss';
+@import '../../Common/Styles/_var.scss';
+
+
+
+.ch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+
+    .top-box {
+        height: 40%;
+
+        h2 {
+            margin: .5rem 0;
+            text-align: center;
+        }
+       
+        .x-btn {
+            left: 0;
+            position: absolute;
+            background-color: $catbgclr;
+            border-radius: 50%;
+            padding: 7px 10px;
+            cursor: pointer;
+            margin: .5rem;
+            border: none;
+            display: inline;
+            @include hover;
+        }
+
+       
+    }
+
+    .ch-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+
+
+        .chfrm {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 40%;
+
+        .c-info{
+            margin: 10px 0 -2px 0;
+            color: $textclr;
+            font-size: medium;
+        }
+        .si{
+            margin: 3px 0;
+            color: $textclr;
+            font-size: medium;
+        }
+
+        .log{
+
+            margin: 0;
+            span{
+
+                &:first-child{
+                    color: $textclr;
+                }
+                &:last-child{
+                    color: $btnclr;
+                    cursor: pointer;
+                    
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+        }
+
+            .fields {
+                width: 100%;
+                border-radius: 15px;
+                padding: 10px;
+                outline-color: $btnclr;
+                border: 1px solid gray;
+            }
+
+            .err {
+               margin: -6px;
+                color: red;
+                font-size: 12px
+            }
+
+            .last-fields{
+                width: 100%;
+                display: flex;
+                gap: 5px;
+                .lst{
+                    width: 50%;
+                }
+               
+            
+            }
+           
+          
+
+        }
+
+        
+
+       
+    }
+    .btnqwe{
+        width: 100%;
+        position: absolute;
+      top: 94vh;
+        left: 0;
+        
+        text-transform: uppercase;
+        @include clrbtn;
+        border-radius: 0%;
+       
+    }
+}

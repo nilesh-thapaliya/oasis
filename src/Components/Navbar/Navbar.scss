@@ -1,0 +1,151 @@
+@import '../../Common/Styles/Mixin.scss';
+
+
+
+.nav-box {
+    width: 100%;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    .left {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding-left: 1rem;
+
+        img {
+
+            height: 25px;
+            width: min-content;
+            padding-left: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    .center {
+        @include max700 {
+            display: none;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                list-style: none;
+                margin: 0 1rem;
+                font-weight: 500;
+                cursor: pointer;
+                @include hover;
+                @include ulinehover;
+            }
+
+
+        }
+
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 1rem;
+        gap: 20px;
+
+        @include max700 {
+
+            display: none;
+        }
+
+
+        li {
+            font-weight: 600;
+            font-size: 1.3rem;
+            list-style: none;
+            background-color: $catbgclr;
+            border-radius: 45%;
+            color: $btnclr;
+            padding: 6px 10px 2px 10px;
+            cursor: pointer;
+            @include hover;
+         
+        }
+
+        .login {
+
+            @include clrbtn;
+        }
+    }
+
+    .menu-icn {
+        display: none;
+        cursor: pointer;
+        list-style: none;
+        font-size: 1.3rem;
+        padding-right: 1.5rem;
+        @include max700 {
+            display: block;
+        }
+
+        @include hover;
+        @include ulinehover;
+
+
+
+    }
+}
+
+
+.menu-drawer{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: max-content;
+    animation: drawer 1s ease;
+  
+    @keyframes drawer {
+        0%{
+            scale: 0;
+            
+        }
+        100%{
+            scale: 1;
+            
+        }
+    }
+
+    ul {
+
+        li {
+            list-style: none;
+            margin: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            @include hover;
+            @include ulinehover;
+          
+            &:last-child {
+                color: $btnclr;
+                font-size: 1.3rem;
+                list-style: none;
+               
+        }
+        }
+
+        
+
+    }
+    .login{
+        @include clrbtn;
+
+    }
+}
+
+

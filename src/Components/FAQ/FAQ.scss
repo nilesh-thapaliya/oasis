@@ -1,0 +1,58 @@
+@import '../../Common/Styles/Mixin.scss';
+@import '../../Common/Styles/_var.scss';
+
+.faq-main{
+    width: 80%;
+    margin:1rem auto;
+
+    h2{
+    margin: 2rem 3px;
+    }
+
+    .que-ans{
+        border-bottom: 1px solid gray;
+        .qns{
+            display: flex;
+            justify-content: space-between;
+            h3:first-child{
+                flex: 1;
+                font-weight: 500;
+                margin: 1rem 0;
+            }
+            h3:nth-child(2){
+                font-size: 1.2rem;
+                cursor: pointer;
+                font-weight: 500;
+                flex: 8;
+                margin: 1rem 0;
+            }
+            span{
+                img{
+         
+                    margin: 1rem 0;
+                 background-color: rgba(240, 235, 235, 0.349);
+                 border-radius: 50%;
+                 cursor: pointer;
+                } 
+                
+            }
+        }
+        p{
+            
+        margin: 1rem ;
+        margin-top: 3px;
+        color: $textclr;
+        font-size: 1rem;
+        width: 90%;
+        text-align: left;
+        padding-left: 6rem;
+
+@include max700{
+    padding-left: 2rem ;
+}
+@include max500{
+    padding-left: 1rem ;
+}
+        }
+    }
+}

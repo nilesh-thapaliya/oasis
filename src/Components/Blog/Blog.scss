@@ -1,0 +1,87 @@
+@import '../../Common/Styles/Mixin.scss';
+@import '../../Common/Styles/_var.scss';
+
+.blog-main {
+
+    width: 100%;
+
+}
+
+.top {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    h1 {
+        width: 95%;
+        font-size: 2.5rem;
+        margin: 1rem 0;
+    }
+
+    p{
+        color: $textclr;
+        margin: .5rem 0;
+    }
+    .read {
+        margin: 1rem 0;
+        @include clrbtn($catbgclr, black)
+    }
+
+    img {
+        align-self: center;
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+
+.bottom{
+    width: 80%;
+    margin: 1rem auto;
+    margin-bottom:2rem ;
+    padding-bottom: 3rem;
+    position: relative;;
+    .cards{
+        margin: 1rem auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,300px);
+        gap: 10px;
+        justify-content: space-between;
+        @include max800 {
+            justify-content: center;
+        }
+
+        img{
+            max-width: 300px;
+        }
+    
+        h4{
+            width: 80%;
+            margin: .5rem;
+        }
+        p{
+            font-size: smaller;
+            margin: .5rem;
+            color: $textclr;
+        }
+
+        button{
+            margin: .5rem;
+            
+            @include clrbtn($catbgclr,$btnclr);
+            padding: 5px 9px;
+            font-size: smaller;
+        }
+    }
+
+    .last-btn{ 
+        position:absolute;
+        bottom:0;
+        left: 50%;
+        translate: -50% 0;
+        @include transbtn;
+        padding: 10px 15px;
+    }
+}
+
+

@@ -1,0 +1,68 @@
+@import '../../Common/Styles/Mixin.scss';
+@import '../../Common/Styles/_var.scss';
+
+.footer-main{
+    background-color: black;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+   
+
+    .footer-box{
+        width:80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;     
+        padding: 2rem 0;
+        margin: 0 auto;
+
+        @include max700{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+      
+        .box{
+            h5{
+                color: gray;
+                margin: 1.5rem 0 0.5rem 0;
+            }
+
+            p{
+                font-size: 14px;
+                cursor: pointer;
+                @include ulinehover;
+                
+            }
+        }
+
+        .box1{
+           img{
+            margin-bottom: 4rem;
+            filter: invert(1);
+           }
+            span{
+                display: flex;
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                h5{
+                    color: white;
+                    margin: 0 .5rem;
+                    cursor: pointer;
+                    @include ulinehover;
+                }
+            }
+        }
+
+        .box4{
+           margin-top: 4rem;
+           @include max700{
+            margin-top: 0;
+           }
+            p{
+                margin-top: 3rem;
+            }
+        }
+    }
+}

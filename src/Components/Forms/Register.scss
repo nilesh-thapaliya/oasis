@@ -1,0 +1,135 @@
+@import '../../Common/Styles/Mixin.scss';
+@import '../../Common/Styles/_var.scss';
+
+
+
+.reg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+
+    .img-box {
+        height: 40%;
+
+        h2 {
+            margin: .5rem 0;
+            text-align: center;
+        }
+
+        .x-btn {
+            left: 0;
+            position: absolute;
+            background-color: $catbgclr;
+            border-radius: 50%;
+            padding: 7px 10px;
+            cursor: pointer;
+            margin: .5rem;
+            border: none;
+            display: inline;
+            @include hover;
+        }
+
+        img {
+            height: 150px;
+            width: 160px;
+        }
+    }
+
+    .reg-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+
+
+        .regfrm {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 40%;
+
+        h5{
+            margin: .5rem 0;
+            font-size: medium;
+        }
+
+            .fields {
+                width: 100%;
+                border-radius: 15px;
+                padding: 8px;
+                outline-color: $btnclr;
+                border: 1px solid gray;
+            }
+
+            .err {
+               margin: -8px;
+                color: red;
+                font-size: 12px
+            }
+
+
+           
+            .btnqwe {
+
+                @include clrbtn;
+               padding: 8px ;
+            }
+
+        }
+
+        .or{
+            font-size: 14px;
+           color: $textclr;
+           margin: 16px 0;
+
+
+
+        }
+
+        .tc{
+         display: flex;
+         width: 40%;
+         gap: 3px;
+         font-size: 13px;
+         margin-bottom: 4px;
+         color: $textclr;
+        position: relative;
+        text-indent: 17px;
+         #check{
+            position: absolute;
+            top: 4px;
+            
+         }
+           }
+        .con-with{
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+            width: 40%;
+            margin: 5px;
+            @include transbtn;
+            padding: 8px;
+          
+        }
+
+        .log{
+            span{
+                &:last-child{
+                    color: $btnclr;
+                    cursor: pointer;
+                    
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
+            }
+        }
+    }
+}

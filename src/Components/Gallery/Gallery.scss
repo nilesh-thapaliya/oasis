@@ -1,0 +1,119 @@
+@import '../../Common/Styles/Mixin.scss';
+@import '../../Common/Styles/_var.scss';
+
+
+.gallery-main {
+    width: 80%;
+    margin: 1rem auto;
+
+
+    h2 {
+        margin: 2rem 3px;
+        margin-bottom: 0;
+    }
+
+    .btns {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        flex-wrap: wrap;
+
+        .btn {
+            min-width: 70px;
+            @include clrbtn($catbgclr, black, $btnclr, white);
+           
+
+
+        }
+        .btn{
+            margin: .5rem;
+            padding: 10px 20px;
+            
+        @include max700{
+            padding: 5px;
+            margin: 3px;
+        }
+    }
+    }
+
+    .imgs {
+
+
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        align-items: flex-start;
+        gap: 10px;
+        justify-items: center;
+
+        @include max700{
+            grid-template-columns: repeat(2, minmax(130px, 1fr));
+        }
+        img {
+            max-width: 300px;
+
+
+            &:nth-child(5) {
+                margin-top: -80px;
+
+            }
+
+            &:nth-child(8) {
+                margin-top: -90px;
+
+            }
+
+            &:nth-child(7) {
+                align-self: flex-end;
+            }
+
+            &:nth-child(9) {
+                margin-top: -20px;
+                align-self: flex-end;
+            
+            }
+            @include max700 {
+        
+
+                max-width: 190px;
+                    margin: 0;
+                    align-self: flex-start;
+                    &:nth-child(5) {
+                        margin-top: 0;
+        
+                    }
+        
+                    &:nth-child(8) {
+                        margin-top: 0;
+        
+                    }
+                    &:nth-child(9), &:nth-child(7){
+                        margin-top: 0px;
+                        align-self: flex-start;
+                        
+                    }
+            }
+
+            @include max500 {
+                width: 140px;
+            }
+        }
+
+    }
+    .slider {
+       
+       margin: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        button{
+            width: 100px;
+            @include transbtn;
+        }
+        }
+    }
+

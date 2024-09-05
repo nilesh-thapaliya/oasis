@@ -1,0 +1,141 @@
+@import '../../Common/Styles/Mixin.scss';
+@import '../../Common/Styles/_var.scss';
+
+
+
+.pm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+
+    .top-box {
+        height: 40%;
+
+        h2 {
+            margin: .5rem 0;
+            text-align: center;
+        }
+
+        .x-btn {
+            left: 0;
+            position: absolute;
+            background-color: $catbgclr;
+            border-radius: 50%;
+            padding: 7px 10px;
+            cursor: pointer;
+            margin: .5rem;
+            border: none;
+            display: inline;
+            @include hover;
+        }
+
+
+    }
+
+    .pm-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+
+
+
+        .pmfrm {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 40%;
+            margin-top: 1.5rem;
+
+
+            .fields {
+                width: 100%;
+                border-radius: 15px;
+                padding: 10px 20px;
+                outline-color: $btnclr;
+                border: 1px solid gray;
+            }
+
+            .err {
+                margin: -6px;
+                color: red;
+                font-size: 12px
+            }
+
+
+
+            .card-fields {
+                display: flex;
+                width: 100%;
+                gap: 5px;
+                position: relative;
+                height: max-content;
+                margin-bottom: 12px;
+
+                .err {
+                    position: absolute;
+                    margin: 7px 0;
+                    bottom: -25px;
+                }
+
+                .cverr {
+                    right: 25px;
+                }
+            }
+
+
+            .add-box {
+                display: flex;
+                align-items: center;
+                gap: 3px;
+                margin: .8rem 3px;
+                font-size: 12px;
+                color: $textclr;
+            }
+
+            .rem-box {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin: .8rem 3px;
+                font-size: 12px;
+                color: $textclr;
+                h5{
+                    
+                    font-size: medium;
+                }
+                span {
+                    display: flex;
+                    gap: 3px;
+                    align-items: center;
+
+                }
+
+            }
+
+
+        }
+
+
+
+
+    }
+
+    .btnqwe {
+        width: 100%;
+        position: absolute;
+        top: 94vh;
+        left: 0;
+
+        text-transform: uppercase;
+        @include clrbtn;
+        border-radius: 0%;
+
+    }
+}

@@ -1,0 +1,119 @@
+@import '../../Common/Styles/Mixin.scss';
+@import '../../Common/Styles/_var.scss';
+
+.cats {
+
+  width: 80%;
+  margin: 1rem auto;
+
+  h2 {
+
+    margin-bottom: 20px;
+  }
+
+  .datas {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+
+
+    @include max500 {
+      grid-template-columns: 1fr;
+      grid-auto-rows: minmax(300px, auto)
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-around;
+      background: $catbgclr;
+      padding: 20px ;
+      height: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+
+
+      .btn-head{
+        margin: 1rem 0;
+      }
+
+      &:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+        position: relative;
+
+
+        .btn-head{
+          position: absolute;
+          left: 20%;
+          @include max700 {
+            left: 10%;
+          }
+          @include max500 {
+            left: 5%;
+          }
+        }
+        img{
+          right: 0;
+         height: 90%;
+          position: absolute;
+          max-width: 90%;
+          @include max700 {
+           
+            height: 50%;
+          }
+          @include max500 {
+           
+            height: 40%;
+          }
+        }
+
+        
+      
+        @include max500 {
+          grid-column: span 1;
+        }
+      }
+
+      &:nth-child(4) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+
+        @include max500 {
+          grid-column: span 1;
+        }
+      }
+
+      img {
+        max-width: 90%;
+        height: 80%;
+        border-radius: 8px;
+        overflow: hidden;
+        
+      }
+
+      h2 {
+        text-wrap: nowrap;
+        margin-bottom: 10px;
+
+        @include max500 {
+          font-size: medium;
+          cursor: pointer;
+        }
+      }
+
+      button {
+        @include transbtn;
+
+        @include max500 {
+          display: none;
+        }
+      }
+    }
+
+
+  }
+}
