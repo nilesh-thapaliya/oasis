@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { PiShippingContainerBold } from 'react-icons/pi';
 import { RiLeafLine } from 'react-icons/ri';
 import Productslider from '../Productslider/Productslider';
-// import MyContext from '../../Common/Context/MyContext';
+
 const Overview = () => {
 
 
