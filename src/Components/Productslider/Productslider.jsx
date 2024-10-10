@@ -1,14 +1,21 @@
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Data from '../Categories/Data';
+// import Data from '../Categories/Data';
 import './Productslider.scss'
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 const Productslider = () => {
 
     const navigate =useNavigate();
-    
+    const[data,setData]=useState([])
+ 
+    useEffect(()=>{
+        axios.get('http://oasis-backend-three.vercel.app/category-api')
+        .then(a=>setData(a.data.data))
+    })
+
 return (
     <>
 
@@ -66,7 +73,7 @@ swipeable
 >
 
  
-{Data
+{data
 .map((o)=>{
     return(
 
@@ -75,7 +82,7 @@ swipeable
 
                     <div className="probox-slider">
                 <img src={i.imagepath} onClick={() => navigate(`/${o.title}/${i.name}`)} alt="" height={250} width={250}  /> 
-                    <button className='atc' >add to cart&#x2192;</button>
+                  
                    <span>
                        <p className='p1'>{i.name}</p>
                        <p className='p2'>${i.prize}</p>

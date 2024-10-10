@@ -18,6 +18,13 @@ import Checkout from "./Components/Checkout/Checkout";
 import Payment from "./Components/Payment/Payment";
 import Confirm from "./Components/Confirm/Confirm";
 import Blog from "./Components/Blog/Blog";
+import Accountdetails from "./Components/Accountdetails/Accountdetails";
+import Userprofile from "./Components/Userprofile/Userprofile";
+
+import Snackbarcom from "./Components/Snackbar/Snackbar";
+import Orderdetails from "./Components/Orderdetails/Orderdetails";
+import Admin from "./Components/Admin/Admin";
+import Resetpass from "./Components/Forms/Resetpass";
 
 
 
@@ -43,6 +50,9 @@ function App() {
           <Checkout/>   
           <Payment/>
           <Confirm/>
+          <Snackbarcom/>
+          <Userprofile/>    
+          <Orderdetails/>    
           
           <Routes>
               <Route index element={<Homepage />} />
@@ -51,6 +61,9 @@ function App() {
               <Route path='/:category/:products' element={<Overview />} />
               <Route path='/all' element={<HomeProduct />} />
               <Route path='/blog' element={<Blog />} />
+              <Route path='/account-detail' element={<Accountdetails />} />
+              <Route path='/admin-page' element={<Admin />} />
+              <Route path='/forgot-password' element={<Resetpass />} />
 
           </Routes>
           

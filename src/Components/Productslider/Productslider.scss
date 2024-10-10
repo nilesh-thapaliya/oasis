@@ -12,6 +12,15 @@
     left: 91%;
     top: 0;
     position: absolute;
+    
+    @include max700{
+        left: 80%;
+
+    }
+
+    @include max500{
+        left: 70%;
+    }
 }
 .react-multiple-carousel__arrow--right {
     right: 10px;
@@ -71,6 +80,10 @@
 
             @include max700 {
                 padding-right: 3px;
+            }
+            @include max500 {
+              display: none;
+                
             }
         }
 

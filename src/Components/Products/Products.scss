@@ -140,9 +140,16 @@
                 left: 20px;
                 top: 170px;
                 @include clrbtn;
-
+                
                 &:hover {
                     opacity: 1;
+                }
+                @include max700{
+                    opacity: 1;
+                    font-size: 14px;
+                    padding:8px;
+                    font-size: smaller;
+
                 }
             }
 
@@ -156,7 +163,7 @@
                 gap: .5rem;
 
                 span {
-
+                    cursor: pointer;
                     height: 14px;
                     width: 14px;
                     border-radius: 50%;
@@ -165,4 +172,10 @@
 
         }
     }
+}
+
+#wrn{
+    margin: 0;
+    color: red;
+    font-size: 12px;
 }

@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Categories.scss'
-import Data from './Data'
+// import Data from './Data'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
 const Categories = () => {
 
   const navigate = useNavigate();
+
+   const[data,setData]=useState([])
+ 
+    useEffect(()=>{
+        axios.get('http://oasis-backend-three.vercel.app/category-api')
+        .then(a=>setData(a.data.data))
+    })
+
   return (
     <div className='cats'>
       <h2>Categories</h2>
 
       <div className="datas">
         {
-          Data.map((item ) => (
+          data.map((item ) => (
             <div className='item'  >
               <div className='btn-head'>
               <h2 onClick={() => navigate(`/category/${item.title}`) }> {item.title} </h2>

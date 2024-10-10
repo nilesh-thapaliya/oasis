@@ -1,38 +1,31 @@
 import React, { useContext } from 'react';
 import './Cart.scss';
-import Drawer from 'react-modern-drawer';
+
 import 'react-modern-drawer/dist/index.css';
 import cartimg from '../../Assets/Cart/Squircle.png';
+import { useNavigate } from 'react-router-dom';
 import MyContext from '../../Common/Context/MyContext';
 
 
-const Cart = () => {
-    const { cartOpen,togglecart } = useContext(MyContext);
-   
-    const drawerwidth = window.innerWidth>786;
-  
+
+const Cart1 = () => {
+    const Navigate = useNavigate()
+  const { togglecart} = useContext(MyContext)
   return (
    
        <>
-            <Drawer
-                open={cartOpen}
-                onClose={togglecart}
-                direction='right'
-                size={drawerwidth?'48%':'100%'}
-                className=''
-            >
+          
                 <div  className='cart-main'>
-                <button onClick={toggleDrawer} className='x-btn' >  &#10006; </button>
-                    <h2>Cart</h2>
+               
                     <p>Your cart is empty</p>
                     <img src={cartimg} alt="" />
                 </div>
                 
-                <button className="shop"> Shop All</button>
-            </Drawer>
+                <button className="shop" onClick={()=>Navigate('/categories') || togglecart() } > Shop All</button>
+         
         </>
     
   )
 }
 
-export default Cart
+export default Cart1

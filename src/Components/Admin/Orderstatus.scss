@@ -1,0 +1,8 @@
+@import '../../Common/Styles/Mixin.scss';
+@import '../../Common/Styles/_var.scss';
+
+.sipd{
+    @include clrbtn;
+    padding: 5px;
+    margin: 5px;
+}

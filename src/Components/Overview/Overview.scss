@@ -2,7 +2,9 @@
 @import '../../Common/Styles/_var.scss';
 
 
-
+.loadermain{
+    @include loder;
+}
 
 .ovr-main {
     width: 80%;
@@ -77,10 +79,16 @@
             display: flex;
             width: 70%;
             justify-content: space-between;
+            #wrn{
+                margin-top:1rem ;
+                color: red;
+                font-size: 16px;
+            }
             .clrs {
                 display: flex;
 
                 .clr {
+                    cursor: pointer;
                     margin: 1rem;
                     margin-left: 0;
                     height: 25px;

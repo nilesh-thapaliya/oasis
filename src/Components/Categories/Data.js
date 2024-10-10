@@ -86,7 +86,7 @@ const Data = [
                 id: 8,
                 name: 'Metro-Luxe-Duo-Sofa',
                 prize: 150,
-                color: 'brown',
+                color1: 'brown',
                 imagepath: require('../../Assets/Products/image (13).png'),
                 pdimg1: require('../../Assets/PDimgs/PDimg (17).png'),
                 pdimg2: require('../../Assets/PDimgs/PDimg (28).png'),
@@ -281,5 +281,9 @@ const Data = [
         ],
     },
 ];
+
+const jsonString = JSON.stringify(Data);
+console.log(jsonString); 
+
 
 export default Data;
