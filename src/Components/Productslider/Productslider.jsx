@@ -14,7 +14,7 @@ const Productslider = () => {
     useEffect(()=>{
         axios.get('https://oasis-backend-three.vercel.app/category-api')
         .then(a=>setData(a.data.data))
-    })
+    },[])
 
 return (
     <>

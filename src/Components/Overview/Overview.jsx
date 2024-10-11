@@ -28,7 +28,7 @@ const Overview = () => {
     useEffect(() => {
         axios.get('https://oasis-backend-three.vercel.app/category-api')
             .then(a => setData(a.data.data))
-    })
+    },[])
 
 
     const addtocart = async (productimg, producttitle, productprice, productid, categoryid) => {
