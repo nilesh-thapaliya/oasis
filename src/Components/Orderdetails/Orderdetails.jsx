@@ -18,7 +18,7 @@ const Orderdetails = () => {
         }
         const fetchItems = async () => {
             try {
-                const response = await fetch('http://oasis-backend-three.vercel.app/orderget', {
+                const response = await fetch('https://oasis-backend-three.vercel.app/orderget', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },

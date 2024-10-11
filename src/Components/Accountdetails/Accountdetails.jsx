@@ -18,7 +18,7 @@ const Accountdetails = () => {
     const handleSubmit = async (values, { resetForm }) => {
         try {
             setLoader(true)
-            const {data} = await axios.post('http://oasis-backend-three.vercel.app/update-acdetails', values,{
+            const {data} = await axios.post('https://oasis-backend-three.vercel.app/update-acdetails', values,{
                 headers: {
                     Authorization: `Bearer ${token}`,
                     },

@@ -19,7 +19,7 @@ const Forgot = () => {
     const handleSubmit = async (values, { resetForm }) => {
         try {
             setLoader(true)
-            const response = await axios.post('http://oasis-backend-three.vercel.app/forgot', values)
+            const response = await axios.post('https://oasis-backend-three.vercel.app/forgot', values)
             const data = response.data
 
             if (data.success) {

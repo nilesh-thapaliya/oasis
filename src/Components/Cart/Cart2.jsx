@@ -24,7 +24,7 @@ const Cart = () => {
         }
         const fetchCartItems = async () => {
             try {
-                const response = await fetch('http://oasis-backend-three.vercel.app/cart', {
+                const response = await fetch('https://oasis-backend-three.vercel.app/cart', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -47,7 +47,7 @@ const Cart = () => {
     const handleIncrease = async (categoryid, productid, selectedcolor) => {
         try {
             setLoader(true)
-            const { data } = await axios.post('http://oasis-backend-three.vercel.app/increase-Item', { categoryid, productid, selectedcolor }, {
+            const { data } = await axios.post('https://oasis-backend-three.vercel.app/increase-Item', { categoryid, productid, selectedcolor }, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -72,7 +72,7 @@ const Cart = () => {
     const handleDecrease = async (categoryid, productid, selectedcolor) => {
         try {
             setLoader(true)
-            const { data } = await axios.post('http://oasis-backend-three.vercel.app/decrease-Item', { categoryid, productid, selectedcolor }, {
+            const { data } = await axios.post('https://oasis-backend-three.vercel.app/decrease-Item', { categoryid, productid, selectedcolor }, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -97,7 +97,7 @@ const Cart = () => {
     const removeitem = async (categoryid, productid, selectedcolor) => {
         try {
             setLoader(true)
-            const { data } = await axios.post('http://oasis-backend-three.vercel.app/remove-Item', { categoryid, productid, selectedcolor }, {
+            const { data } = await axios.post('https://oasis-backend-three.vercel.app/remove-Item', { categoryid, productid, selectedcolor }, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

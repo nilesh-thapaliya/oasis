@@ -12,7 +12,7 @@ const Productslider = () => {
     const[data,setData]=useState([])
  
     useEffect(()=>{
-        axios.get('http://oasis-backend-three.vercel.app/category-api')
+        axios.get('https://oasis-backend-three.vercel.app/category-api')
         .then(a=>setData(a.data.data))
     })
 

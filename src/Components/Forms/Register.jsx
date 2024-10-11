@@ -31,7 +31,7 @@ const Register = () => {
         }
         try {
             setLoader(true)
-            const response = await axios.post('http://oasis-backend-three.vercel.app/register', values)
+            const response = await axios.post('https://oasis-backend-three.vercel.app/register', values)
             const data = response.data
 
             if (data.success) {

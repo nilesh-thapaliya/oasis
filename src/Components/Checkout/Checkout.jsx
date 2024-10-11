@@ -22,7 +22,7 @@ const Checkout = () => {
         }
         const fetchshipping = async () => {
             try {
-                const { data } = await axios.get('http://oasis-backend-three.vercel.app/shipping-info', {
+                const { data } = await axios.get('https://oasis-backend-three.vercel.app/shipping-info', {
                     headers: {
                       Authorization: `Bearer ${token}`,
                     },
@@ -44,7 +44,7 @@ const Checkout = () => {
     const handleSubmit = async (values, { resetForm }) => {
         try {
             setLoader(true)
-            const { data } = await axios.post('http://oasis-backend-three.vercel.app/shipping', values, {
+            const { data } = await axios.post('https://oasis-backend-three.vercel.app/shipping', values, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

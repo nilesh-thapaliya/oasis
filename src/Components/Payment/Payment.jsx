@@ -17,7 +17,7 @@ const Payment = () => {
         try {
             const orderdate = { orderdate: new Date().toISOString().split('T')[0] };
             setLoader(true)
-            const { data } = await axios.post('http://oasis-backend-three.vercel.app/add2order-details', orderdate, {
+            const { data } = await axios.post('https://oasis-backend-three.vercel.app/add2order-details', orderdate, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

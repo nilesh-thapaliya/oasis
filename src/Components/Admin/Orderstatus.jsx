@@ -11,13 +11,13 @@ const Orderstatus = () => {
 
     const [rdata, setRdata] = useState([])
     useEffect(() => {
-        axios.get('http://oasis-backend-three.vercel.app/register-info')
+        axios.get('https://oasis-backend-three.vercel.app/register-info')
             .then(a => setRdata(a.data.data))
     }, [])
 
 
     const shippedfunc = async (email,categoryid,productid,selectedcolor) => {
-        const { data } = await axios.post('http://oasis-backend-three.vercel.app/shipping-true' ,{email,categoryid,productid,selectedcolor}, {
+        const { data } = await axios.post('https://oasis-backend-three.vercel.app/shipping-true' ,{email,categoryid,productid,selectedcolor}, {
     
         });
 
@@ -32,7 +32,7 @@ const Orderstatus = () => {
     const deliverdfunc = async (email,categoryid,productid,selectedcolor) => {
 
    
-        const { data } = await axios.post('http://oasis-backend-three.vercel.app/deliverd-true' ,{email,categoryid,productid,selectedcolor}, {
+        const { data } = await axios.post('https://oasis-backend-three.vercel.app/deliverd-true' ,{email,categoryid,productid,selectedcolor}, {
        
         });
 

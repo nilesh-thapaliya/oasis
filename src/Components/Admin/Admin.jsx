@@ -23,7 +23,7 @@ const Admin = () => {
 
     const [rdata, setRdata] = useState([])
     useEffect(() => {
-        axios.get('http://oasis-backend-three.vercel.app/register-info')
+        axios.get('https://oasis-backend-three.vercel.app/register-info')
             .then(a => setRdata(a.data.data))
     }, [])
 
