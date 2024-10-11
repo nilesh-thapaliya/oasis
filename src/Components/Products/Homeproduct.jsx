@@ -17,7 +17,7 @@ const HomeProduct = () => {
     useEffect(()=>{
         axios.get('https://oasis-backend-three.vercel.app/category-api')
         .then(a=>setData(a.data.data))
-    })
+    },[])
 
 
     const handleSortChange = (e) => {

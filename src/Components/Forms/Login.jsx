@@ -17,7 +17,7 @@ const Login = () => {
     const [snakopen, Setsnakopen] = useState(false)
     const [msg, setMsg] = useState('')
 
-    const { loginopen, togglelogin, toggleforget, toggleregister, setToken, setAcdetail ,setShipping} = useContext(MyContext);
+    const { loginopen, togglelogin, toggleforget, toggleregister, setToken, setAcdetail,setCart, setOrder ,setShipping} = useContext(MyContext);
 
     const drawerwidth = window.innerWidth > 786;
 
@@ -40,6 +40,11 @@ const Login = () => {
                 setShipping(data.shippingInfo)
                 sessionStorage.setItem('shipping',JSON.stringify(data.shippingInfo))
 
+                setOrder(data.orderInfo);
+                sessionStorage.setItem('order', JSON.stringify(data.orderInfo));
+
+                setCart(data.cartInfo)
+                sessionStorage.setItem('cart', JSON.stringify(data.cartInfo))
 
                 resetForm()
                 togglelogin()

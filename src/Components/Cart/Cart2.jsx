@@ -54,10 +54,10 @@ const Cart = () => {
             })
 
             if (data.success) {
+                setCart(data.cartInfo)
                 sessionStorage.setItem('cart', JSON.stringify(data.cartInfo))
                 setMsg(data.message)
                 Setsnakopen(true)
-                setCart(data.cartInfo)
             } else {
                 setMsg(data.error)
                 Setsnakopen(true)
